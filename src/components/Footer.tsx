@@ -4,7 +4,7 @@ import { Brand } from './Brand'
 
 const footerGroups = [
   { title: 'EXPLORE', links: [['Our services', '#services'], ['How it works', '#how'], ['Pricing', '#pricing'], ['FAQs', '#faq']] },
-  { title: 'GET IN TOUCH', links: [['Free eligibility check', '#contact'], ['Email support', `mailto:${supportEmail}`], ['GeM registration', '#registration']] },
+  { title: 'GET IN TOUCH', links: [['Free eligibility check', '#contact'], [`WhatsApp: +91 91879 43361`, makeWhatsAppLink('Hi Tenderpilot, I would like to know more about your services.')], [supportEmail, `mailto:${supportEmail}`], ['GeM registration', '#registration']] },
   { title: 'THE DETAILS', links: [['Independence & disclaimer', '#disclaimer'], ['Privacy note', '#privacy']] },
 ]
 export default function Footer() {
