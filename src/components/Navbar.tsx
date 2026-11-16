@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { ArrowUpRight, Menu, X } from 'lucide-react'
 import { Brand } from './Brand'
 
-const links = [['GeM guide', '#gem-guide'], ['What we do', '#services'], ['Pricing', '#pricing'], ['FAQs', '#faq']]
+const links = [['GeM guide', '/gem-guide'], ['What we do', '/services'], ['Pricing', '/pricing'], ['FAQs', '/faq']]
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
   useEffect(() => {
@@ -16,7 +16,7 @@ export default function Navbar() {
     <button className="mobile-menu" aria-label={menuOpen ? 'Close menu' : 'Open menu'} aria-expanded={menuOpen} aria-controls="main-navigation" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <X /> : <Menu />}</button>
     <nav id="main-navigation" className={menuOpen ? 'nav-links nav-open' : 'nav-links'} aria-label="Main navigation">
       {links.map(([label, href]) => <a href={href} key={href} onClick={() => setMenuOpen(false)}>{label}</a>)}
-      <a className="nav-cta" href="#contact" onClick={() => setMenuOpen(false)}>Get a free check <ArrowUpRight size={15} /></a>
+      <a className="nav-cta" href="/contact" onClick={() => setMenuOpen(false)}>Get a free check <ArrowUpRight size={15} /></a>
     </nav>
   </header>
 }
