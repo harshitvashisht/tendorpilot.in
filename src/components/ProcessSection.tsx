@@ -1,11 +1,10 @@
-import { ArrowRight, FileSearch, Handshake, MessageCircle } from 'lucide-react'
-import { Eyebrow, TextLink } from './Brand'
 const steps = [
-  { title: 'Tell us about your business', text: 'A short conversation about what you do and what you want to achieve.', icon: MessageCircle },
-  { title: 'Get a clear first check', text: 'We’ll talk through your starting point and the documents you may need.', icon: FileSearch },
-  { title: 'Choose your support', text: 'We’ll explain the relevant service and fee before you decide how to proceed.', icon: Handshake },
-  { title: 'Move ahead with a guide', text: 'Get practical help with the next steps, with updates along the way.', icon: ArrowRight },
+  { title: 'Free eligibility check', text: 'Tell us what you sell. We’ll tell you where you can bid and what you need.' },
+  { title: 'Set up', text: 'We prepare your account, documents and catalogue.' },
+  { title: 'Bid', text: 'We track bids, prepare submissions and support auctions.' },
+  { title: 'Deliver and grow', text: 'We follow orders through to payment and keep your account healthy.' },
 ]
+
 export default function ProcessSection() {
-  return <section className="process-section section-pad" id="how"><div className="process-title"><Eyebrow light>A SIMPLE PLACE TO START</Eyebrow><h2>Four steps.<br /><em>One clear path.</em></h2><p>There’s no need to figure everything out before you talk to us. We’ll take it one step at a time.</p><TextLink href="/contact" light>Start with a free check <ArrowRight size={15} /></TextLink></div><div className="process-steps">{steps.map(({ icon: Icon, ...step }, index) => <article key={step.title}><span className="step-number">0{index + 1}</span><div><h3>{step.title}</h3><p>{step.text}</p></div><span className="step-symbol"><Icon size={19} /></span></article>)}</div></section>
+  return <section className="process-section section-pad" id="how"><div className="section-heading"><div><span className="eyebrow">HOW IT WORKS</span><h2>Four steps from enquiry to first order</h2></div><p>No jargon, no hidden steps.</p></div><div className="process-grid">{steps.map((step, index) => <article key={step.title}><span className="step-number">{index + 1}</span><h3>{step.title}</h3><p>{step.text}</p></article>)}</div></section>
 }

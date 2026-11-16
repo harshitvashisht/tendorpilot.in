@@ -1,12 +1,10 @@
-import { ArrowUpRight } from 'lucide-react'
-import { Eyebrow } from './Brand'
-
 const audiences = [
-  { index: '01 / MSMEs', title: <>Small business.<br />Serious potential.</>, text: 'Get clearer on the registrations and documents needed to begin selling to public buyers.', tone: '' },
-  { index: '02 / OEMs & MAKERS', title: <>Your products,<br />in the right place.</>, text: 'Get support preparing product information and understanding catalogue requirements.', tone: 'audience-card-dark' },
-  { index: '03 / TRADERS', title: <>More routes<br />to market.</>, text: 'Explore procurement opportunities that could make sense for what you supply.', tone: 'audience-card-yellow' },
-  { index: '04 / SERVICE PROVIDERS', title: <>Expertise that<br />travels further.</>, text: 'Find a more guided way to prepare for public service opportunities.', tone: '' },
+  { title: 'MSMEs and startups', text: 'Use your Udyam and Startup status to qualify for bid relaxations, and avoid the common mistakes that get new sellers rejected.' },
+  { title: 'OEMs and manufacturers', text: 'Brand approval, OEM panel setup, authorisations for your dealers and compliant catalogues across your product range.' },
+  { title: 'Traders and resellers', text: 'Reseller authorisations, competitive pricing and bid-ready documents, so you can bid across many categories.' },
+  { title: 'Service providers', text: 'Manpower, housekeeping, IT, security, transport and more: service catalogues, custom bids and contract compliance.' },
 ]
+
 export default function AudienceSection() {
-  return <section className="who-section section-pad"><div className="section-heading"><div><Eyebrow>WHO WE HELP</Eyebrow><h2>Good work deserves<br />a <em>bigger market.</em></h2></div><p>Whether you make things, move things or provide a service, we help you understand how public procurement could fit your business.</p></div><div className="audience-grid">{audiences.map((item, index) => <article className={`audience-card ${item.tone}`} key={item.index}><span className="audience-index">{item.index}</span><h3>{item.title}</h3><p>{item.text}</p><span className="audience-arrow"><ArrowUpRight size={16} /></span><span className={`audience-graphic graphic-${index + 1}`} aria-hidden="true" /></article>)}</div></section>
+  return <section className="who-section section-pad" id="who-we-help"><div className="section-heading"><div><span className="eyebrow">WHO WE HELP</span><h2>Built for every kind<br />of GeM seller</h2></div><p>Whether you make it, resell it or provide it as a service, the portal rules differ. We know which ones apply to you.</p></div><div className="audience-grid">{audiences.map((item, index) => <article className="audience-card" key={item.title}><span className="audience-index">0{index + 1}</span><h3>{item.title}</h3><p>{item.text}</p></article>)}</div></section>
 }

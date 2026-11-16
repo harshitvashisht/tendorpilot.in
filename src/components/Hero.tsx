@@ -1,17 +1,25 @@
-import { ArrowDown, ArrowDownRight, ArrowRight, ArrowUpRight, BadgeCheck, Check, ShieldCheck, Sparkles } from 'lucide-react'
-import { Eyebrow, TextLink } from './Brand'
+import { ArrowDownRight, ArrowRight, Check, FileCheck2 } from 'lucide-react'
+
+const bidSteps = [
+  'Bid alert matched to your categories',
+  'Eligibility and ATC review, with a clear bid/no-bid call',
+  'Technical and financial bid prepared and checked',
+  'Reverse auction strategy and live support',
+  'Order, delivery and payment follow-through',
+]
+
 export default function Hero() {
-  return <section className="hero">
-    <div className="hero-grid" aria-hidden="true" />
-    <div className="hero-content"><Eyebrow light>PROCUREMENT, MADE MORE HUMAN</Eyebrow><h1>Government business<br />shouldn’t feel like a<br /><em>maze.</em></h1>
-      <p className="hero-copy">From getting GeM-ready to making sense of tenders, we help Indian businesses take the next step with clarity and confidence.</p>
-      <div className="hero-actions"><a className="button button-primary" href="/contact">Get your free eligibility check <ArrowRight size={17} /></a><TextLink href="/services" light>Explore our services <ArrowDownRight size={16} /></TextLink></div>
-      <div className="hero-proof"><div className="proof-avatars" aria-hidden="true"><span>G</span><span>M</span><span>+</span></div><span>Personal support for your next step</span><span className="proof-divider" /><span className="proof-note"><ShieldCheck size={14} /> Your documents stay confidential</span></div>
+  return <section className="hero" id="top">
+    <div className="hero-inner">
+      <div className="hero-copy">
+        <span className="eyebrow">GEM SUPPORT FOR EVERY SELLER</span>
+        <h1>Win government<br />orders without the<br /><em>paperwork headache.</em></h1>
+        <p>We handle your GeM journey end to end: account setup, catalogue, bids, order execution and account health. You focus on delivering.</p>
+        <div className="hero-actions"><a className="button button-primary" href="/registration">Get GeM registration for ₹4,999 <ArrowRight size={16} /></a><a className="button button-outline button-light" href="/services">See our services <ArrowDownRight size={16} /></a></div>
+      </div>
+      <div className="bid-card"><div className="bid-card-heading"><span className="bid-card-icon"><FileCheck2 size={18} /></span><strong>A GeM bid, handled for you</strong></div><ol>{bidSteps.map((step, index) => <li key={step}><span>{index + 1}</span>{step}<Check size={14} /></li>)}</ol></div>
+      <div className="hero-stats"><div><strong>300+</strong><span>sellers onboarded</span></div><div><strong>800+</strong><span>bids prepared</span></div><div><strong>Goods +<br />services</strong><span>across major GeM categories</span></div><div><strong>All India</strong><span>states and cities served</span></div></div>
     </div>
-    <div className="hero-art" role="img" aria-label="Illustration of a business moving toward a procurement opportunity"><div className="art-orbit orbit-one" /><div className="art-orbit orbit-two" />
-      <div className="art-label label-top"><span className="label-icon"><BadgeCheck size={15} /></span><span><b>GeM ready</b><small>One step at a time</small></span><Check className="label-check" size={15} /></div>
-      <div className="art-chart"><div className="chart-top"><span>YOUR NEXT MOVE</span><ArrowUpRight size={15} /></div><div className="chart-path"><span className="chart-node node-one" /><span className="chart-node node-two" /><span className="chart-node node-three" /><span className="chart-node node-four" /><svg viewBox="0 0 280 126" preserveAspectRatio="none" aria-hidden="true"><path d="M7 110 C 46 105, 52 72, 92 82 S 146 95, 170 51 S 217 57, 233 28 S 260 31, 274 9" /></svg></div><div className="chart-bottom"><span>STARTING OUT</span><span>NEW OPPORTUNITY</span></div></div>
-      <div className="art-ticket"><span className="ticket-icon"><Sparkles size={16} /></span><span><b>A little less guesswork.</b><small>A lot more direction.</small></span></div><div className="art-orbit-dot dot-a" /><div className="art-orbit-dot dot-b" /><div className="art-orbit-dot dot-c" />
-    </div><a className="scroll-cue" href="/registration"><span>SCROLL TO EXPLORE</span><ArrowDown size={14} /></a><div className="hero-side-note">BUILT FOR INDIAN BUSINESSES <span>•</span> MADE FOR THE NEXT STEP</div>
+    <a className="hero-scroll" href="/registration">Explore registration support <ArrowDownRight size={14} /></a>
   </section>
 }

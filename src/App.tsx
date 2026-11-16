@@ -3,7 +3,6 @@ import Announcement from './components/Announcement'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import IntroStrip from './components/IntroStrip'
-import GeMGuideSection from './components/GeMGuideSection'
 import AudienceSection from './components/AudienceSection'
 import WhySection from './components/WhySection'
 import ServicesSection from './components/ServicesSection'
@@ -16,9 +15,11 @@ import FloatingContact from './components/FloatingContact'
 
 const routeSections: Record<string, string> = {
   '/': 'top',
-  '/gem-guide': 'gem-guide',
+  '/gem-guide': 'registration',
   '/services': 'services',
-  '/pricing': 'pricing',
+  '/pricing': 'plans',
+  '/plans': 'plans',
+  '/who-we-help': 'who-we-help',
   '/faq': 'faq',
   '/contact': 'contact',
   '/registration': 'registration',
@@ -70,10 +71,9 @@ export default function App() {
     <>
       <Announcement />
       <Navbar />
-      <main id="top">
+      <main>
         <Hero />
         <IntroStrip />
-        <GeMGuideSection />
         <AudienceSection />
         <WhySection />
         <ServicesSection />

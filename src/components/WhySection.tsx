@@ -1,5 +1,10 @@
-import { ArrowUpRight, Check, ShieldCheck } from 'lucide-react'
-import { Eyebrow } from './Brand'
+const reasons = [
+  { title: 'Same-day service', text: 'We start the day we receive your documents.' },
+  { title: 'Strict NDA', text: 'Every engagement is covered by a strict NDA, so your business details stay private.' },
+  { title: 'Real people, by phone or video', text: 'Our agents connect with you over phone and online calls, not just chat.' },
+  { title: 'Based in Bengaluru, serving all India', text: 'Registered in Bengaluru, supporting sellers in every Indian state and city.' },
+]
+
 export default function WhySection() {
-  return <section className="why-section section-pad"><div className="why-visual"><div className="why-stamp"><span>GOOD<br />WORK,<br /><b>GOVERNMENT<br />READY.</b></span><ArrowUpRight size={19} /></div><div className="why-small-card"><ShieldCheck size={19} /><span><b>Handled with care</b><small>Private by default</small></span></div><div className="why-coordinates">A BETTER WAY FORWARD</div></div><div className="why-copy"><Eyebrow>WHY TENDERPILOT</Eyebrow><h2>Less chasing.<br /><em>More clarity.</em></h2><p className="why-lead">Procurement has rules, forms and a lot of unfamiliar language. We make the process feel more manageable, with a real person in your corner.</p><div className="why-list"><div><span className="why-check"><Check size={14} /></span><span><b>Personal, practical support</b><small>Clear answers from a person who understands the process.</small></span></div><div><span className="why-check"><Check size={14} /></span><span><b>Your information treated with care</b><small>We handle business documents confidentially and only for your support.</small></span></div><div><span className="why-check"><Check size={14} /></span><span><b>A same-day first response</b><small>Start with a quick conversation about your business and your goals.</small></span></div></div><a className="button button-dark" href="/contact">Meet your guide <ArrowUpRight size={16} /></a></div></section>
+  return <section className="why-section section-pad" id="why"><div className="section-heading"><div><span className="eyebrow">WHY TENDERPILOT</span><h2>Fast, private and personal</h2></div></div><div className="reasons-grid">{reasons.map((item, index) => <article className="reason-card" key={item.title}><span>0{index + 1}</span><h3>{item.title}</h3><p>{item.text}</p></article>)}</div></section>
 }

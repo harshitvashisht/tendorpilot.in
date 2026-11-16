@@ -1,5 +1,14 @@
-import { ArrowRight, ArrowUpRight } from 'lucide-react'
-import { Eyebrow } from './Brand'
+import { ArrowUpRight, Check, MessageCircle } from 'lucide-react'
+import { makeWhatsAppLink } from '../config'
+
+const inclusions = [
+  'Document collection and checking',
+  'Seller account creation and profile setup',
+  'DSC guidance',
+  'OEM/reseller and MSE/Startup status setup',
+  'Category selection and eligibility report',
+]
+
 export default function IntroStrip() {
-  return <section className="intro-strip" id="registration"><div className="intro-left"><Eyebrow>THE OPPORTUNITY IS REAL</Eyebrow><h2>Let’s make the<br /><span>first step simpler.</span></h2></div><div className="intro-right"><p>GeM opens up a new way for businesses to work with public buyers. The process can feel unfamiliar at first. Tenderpilot gives you practical guidance to get started, understand what’s needed and move forward at your pace.</p><a href="/contact" className="text-link">Talk to a person <ArrowRight size={15} /></a></div><div className="intro-price"><span className="price-kicker">TENDERPILOT SUPPORT</span><strong>₹4,999</strong><span className="price-caption">One-time assistance fee</span><a href="/contact" aria-label="Ask about Tenderpilot GeM support at ₹4,999">SEE WHAT’S INCLUDED <ArrowUpRight size={13} /></a></div></section>
+  return <section className="registration-section" id="registration"><div className="registration-copy"><span className="eyebrow">OUR CORE SERVICE</span><h2>GeM registration and setup,<br /><em>done for you</em></h2><p>Start selling to government buyers without wrestling with the portal. We collect and check your documents, create your seller account and set up your profile correctly, so you avoid rejections and delays.</p><ul>{inclusions.map((item) => <li key={item}><Check size={15} />{item}</li>)}</ul><div className="registration-actions"><a className="button button-primary" href="/contact">Start my registration <ArrowUpRight size={15} /></a><a className="button button-outline" href={makeWhatsAppLink('Hi Tenderpilot, I would like to ask about GeM registration and setup.')} target="_blank" rel="noreferrer"><MessageCircle size={15} /> Ask on WhatsApp</a></div></div><aside className="registration-price"><span>GeM registration and setup</span><strong>₹4,999</strong><small>one-time fee [+ GST, if applicable]</small><ul><li>We start the day we receive your documents</li><li>Support by phone or online call</li><li>All work under strict NDA</li><li>Catalogue upload is charged separately</li></ul><p>GeM does not charge a registration fee. You pay Tenderpilot for doing it right, fast and with support.</p></aside></section>
 }

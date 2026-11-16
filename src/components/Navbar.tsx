@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { ArrowUpRight, Menu, X } from 'lucide-react'
 import { Brand } from './Brand'
 
-const links = [['GeM guide', '/gem-guide'], ['What we do', '/services'], ['Pricing', '/pricing'], ['FAQs', '/faq']]
+const links = [['GeM registration', '/registration'], ['Who we help', '/who-we-help'], ['Services', '/services'], ['How it works', '/how'], ['Plans', '/plans'], ['FAQ', '/faq']]
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
   useEffect(() => {
