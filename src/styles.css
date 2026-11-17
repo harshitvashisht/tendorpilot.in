@@ -182,11 +182,11 @@ button,input,select,textarea{font:inherit}
 .footer-brand>p,.footer-whatsapp,.footer-nav a,.footer-bottom{font-size:14px}
 .bid-card-heading{font-size:16px}
 .hero-message-card>p{margin:2px 0 0;color:#35434b;line-height:1.55}
-.hero-price{display:grid;width:100%;grid-template-columns:1fr;justify-items:center;align-items:start;gap:3px;margin:17px auto 0;padding-top:14px;border-top:1px solid #e3e9e7;text-align:center}
-.hero-price>strong{grid-column:1;grid-row:auto;font-size:32px;line-height:1.1;letter-spacing:-.04em;color:#0b1f4d}
-.hero-price>span{grid-column:1;grid-row:auto;font-weight:700;line-height:1.15;color:#203249}
-.hero-price>small{grid-column:1;grid-row:auto;max-width:420px;margin-top:2px;color:#596775;line-height:1.4}
-.hero-card-link{display:flex;width:min(100%,400px);align-items:center;justify-content:center;gap:7px;margin:13px auto 0;color:#087668;font-weight:800}
+.hero-price{display:grid;width:min(100%,400px);grid-template-columns:auto 1fr;grid-template-rows:auto auto;align-items:start;gap:3px 10px;margin:17px auto 0;padding-top:14px;border-top:1px solid #e3e9e7}
+.hero-price>strong{grid-column:1;grid-row:1 / span 2;align-self:start;transform:translateY(6px);font-size:29px;line-height:1.15;letter-spacing:-.04em;color:#0b1f4d}
+.hero-price>span{grid-column:2;grid-row:1;align-self:start;font-weight:700;line-height:1.15;color:#203249}
+.hero-price>small{grid-column:2;grid-row:2;margin-top:2px;color:#596775;line-height:1.4}
+.hero-card-link{display:flex;width:min(100%,400px);align-items:center;gap:7px;margin:13px auto 0;color:#087668;font-weight:800}
 .hero-card-link:hover{text-decoration:underline;text-underline-offset:3px}
 .hero-stats>div:nth-child(3) strong{font-size:18px;white-space:nowrap}
 .services-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
