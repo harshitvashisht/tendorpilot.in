@@ -1,8 +1,11 @@
 import { ArrowDownRight, ArrowRight, FileCheck2 } from 'lucide-react'
+import { useState } from 'react'
 import CountUpStat from './CountUpStat'
 
 export default function Hero() {
-  return <section className="hero" id="top">
+  const [countAnimationRun, setCountAnimationRun] = useState(0)
+
+  return <section className="hero" id="top" onPointerEnter={() => setCountAnimationRun((run) => run + 1)}>
     <div className="hero-inner">
       <div className="hero-copy">
         <span className="eyebrow">GEM SUPPORT FOR EVERY SELLER</span>
@@ -16,7 +19,7 @@ export default function Hero() {
         <div className="hero-price"><strong>₹4,999</strong><span>GeM registration and setup</span><small>Professional assistance. One-time service fee, plus applicable taxes.</small></div>
         <a className="hero-card-link" href="/contact">Get your free GeM eligibility check <ArrowRight size={15} /></a>
       </aside>
-      <div className="hero-stats"><div><CountUpStat value={300} suffix="+" /><span>Sellers onboarded</span></div><div><CountUpStat value={800} suffix="+" /><span>Bids prepared</span></div><div><strong className="hero-stat-category">Goods &amp; services</strong><span>Across major GeM categories</span></div><div><strong>All India</strong><span>States and cities served</span></div></div>
+      <div className="hero-stats"><div><CountUpStat value={300} suffix="+" animationKey={countAnimationRun} /><span>Sellers onboarded</span></div><div><CountUpStat value={800} suffix="+" animationKey={countAnimationRun} /><span>Bids prepared</span></div><div><strong className="hero-stat-category">Goods &amp; services</strong><span>Across major GeM categories</span></div><div><strong>All India</strong><span>States and cities served</span></div></div>
     </div>
     <a className="hero-scroll" href="/registration">Explore registration support <ArrowDownRight size={14} /></a>
   </section>
