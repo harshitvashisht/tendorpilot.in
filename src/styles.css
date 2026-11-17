@@ -146,6 +146,7 @@ button,input,select,textarea{font:inherit}
 .site-footer{padding:27px 24px 0;background:#0a2532;color:#e8f0f2}
 .footer-main{max-width:var(--max);margin:auto;display:flex;align-items:center;justify-content:space-between;gap:30px;padding-bottom:20px}
 .brand-light .brand-tagline{color:#f2f6fb}
+.brand-light .brand-name span:first-child{color:#fff}
 .footer-brand>p{margin:4px 0 8px;color:#b7c5ca;font-size:8px}
 .footer-whatsapp{display:inline-flex;align-items:center;gap:6px;color:#7de0c2;font-size:8px;font-weight:700}
 .footer-nav{display:grid;grid-template-columns:repeat(2,auto);gap:30px}
