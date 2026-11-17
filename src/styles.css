@@ -171,3 +171,28 @@ button,input,select,textarea{font:inherit}
   .announcement{font-size:7px;gap:5px}.hero-actions,.registration-actions{align-items:stretch;flex-direction:column}.hero-actions .button,.registration-actions .button{width:100%}.hero h1{font-size:35px}.audience-grid,.reasons-grid{grid-template-columns:1fr}.audience-card h3,.reason-card h3{font-size:12px}.services-grid{grid-template-columns:1fr}.service-card{min-height:0;padding-bottom:36px}.footer-nav{grid-template-columns:1fr 1fr}.contact-details{font-size:7px}.footer-bottom{font-size:6px}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}.announcement-track{animation:none;transform:none}.announcement-copy:nth-child(2){display:none}}
+
+/* Text, layout, and motion refinements from the site edit brief */
+.hero h1{font-size:clamp(34px,5vw,48px);line-height:1.08}
+.hero-copy>p,.hero-message-card>p,.hero-price>span,.hero-price>small,.hero-card-link,.hero-stats span,
+.registration-copy>p,.registration-copy li,.registration-price>span,.registration-price>small,.registration-price li,.registration-price p,
+.section-heading>p,.audience-card p,.reason-card p,.service-card p,.service-card li,.process-grid p,.price-card>p,.price-card li,.price-amount span,
+.faq-item p,.contact-copy>p,.contact-details,.enquiry-form label,.enquiry-form input,.enquiry-form select,.enquiry-form textarea,
+.footer-brand>p,.footer-whatsapp,.footer-nav a,.footer-bottom{font-size:14px}
+.bid-card-heading{font-size:16px}
+.hero-message-card>p{margin:2px 0 0;color:#35434b;line-height:1.55}
+.hero-price{display:grid;grid-template-columns:auto 1fr;align-items:baseline;gap:0 10px;margin-top:17px;padding-top:14px;border-top:1px solid #e3e9e7}
+.hero-price>strong{grid-row:span 2;font-size:29px;line-height:1.15;letter-spacing:-.04em;color:#0b1f4d}
+.hero-price>span{font-weight:700;color:#203249}
+.hero-price>small{grid-column:2;color:#596775;line-height:1.4}
+.hero-card-link{display:flex;align-items:center;gap:7px;margin-top:13px;color:#087668;font-weight:800}
+.hero-card-link:hover{text-decoration:underline;text-underline-offset:3px}
+.hero-stats>div:nth-child(3) strong{font-size:18px;white-space:nowrap}
+.services-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.audience-card h3,.reason-card h3,.service-card h3,.process-grid h3,.price-card h3,.faq-item h3{font-size:16px}
+.footer-nav>div>span{font-size:12px}
+.button{font-size:14px}
+.nav-links{font-size:12px}
+@media(max-width:900px){.services-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:680px){.services-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-stat-category{font-size:13px!important}}
+@media(max-width:380px){.services-grid{grid-template-columns:1fr}}

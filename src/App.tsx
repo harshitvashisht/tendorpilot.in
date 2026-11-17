@@ -28,11 +28,27 @@ const routeSections: Record<string, string> = {
   '/privacy': 'privacy',
 }
 
+const routeTitles: Record<string, string> = {
+  '/': 'TenderPilot – GeM Registration & Seller Support in India',
+  '/gem-guide': 'GeM Seller Registration Services in India | TenderPilot',
+  '/registration': 'GeM Seller Registration Services in India | TenderPilot',
+  '/who-we-help': 'GeM Services for MSMEs, OEMs & Traders | TenderPilot',
+  '/services': 'GeM Seller Support & Management Services | TenderPilot',
+  '/how': 'How GeM Registration Works | TenderPilot',
+  '/plans': 'GeM Registration Pricing & Plans | TenderPilot',
+  '/pricing': 'GeM Registration Pricing & Plans | TenderPilot',
+  '/faq': 'GeM Registration FAQs | TenderPilot',
+  '/contact': 'Contact TenderPilot | Free GeM Eligibility Check',
+  '/disclaimer': 'Disclaimer | TenderPilot',
+  '/privacy': 'Privacy | TenderPilot',
+}
+
 export default function App() {
   useEffect(() => {
     const navigateToPath = (path: string, behavior: ScrollBehavior) => {
       const route = path.replace(/\/$/, '') || '/'
       const sectionId = routeSections[route]
+      document.title = routeTitles[route] ?? routeTitles['/']
       if (sectionId) document.getElementById(sectionId)?.scrollIntoView({ behavior, block: 'start' })
     }
 
