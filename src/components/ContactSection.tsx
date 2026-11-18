@@ -16,13 +16,30 @@ export default function ContactSection() {
     setStatusType('')
     const submission = new FormData(form)
     submission.append('_subject', 'New Tenderpilot website enquiry')
+    // Open a blank tab during the user's click so browsers do not block the
+    // WhatsApp tab after the asynchronous Formspree request completes.
+    const whatsappWindow = window.open('about:blank', '_blank')
     try {
       const response = await fetch(formspreeEndpoint, { method: 'POST', headers: { Accept: 'application/json' }, body: submission })
       if (!response.ok) throw new Error('Form submission failed')
+      const whatsappMessage = [
+        'Hi Tenderpilot, I would like a free eligibility check.',
+        `Name: ${submission.get('name')}`,
+        `Phone or WhatsApp: ${submission.get('phone')}`,
+        `Business type: ${submission.get('business')}`,
+        `What I sell / need help with: ${submission.get('requirements')}`,
+      ].join('\n')
+      if (whatsappWindow) {
+        whatsappWindow.opener = null
+        whatsappWindow.location.href = makeWhatsAppLink(whatsappMessage)
+      }
       setStatusType('success')
-      setStatus(`Thanks — your enquiry was submitted to ${supportEmail}.`)
+      setStatus(whatsappWindow
+        ? `Thanks — your enquiry was submitted to ${supportEmail}. WhatsApp has opened with your details; tap Send to message us.`
+        : `Thanks — your enquiry was submitted to ${supportEmail}. Allow pop-ups to open WhatsApp with your details, then tap Send.`)
       form.reset()
     } catch {
+      whatsappWindow?.close()
       setStatusType('error')
       setStatus(`We could not submit the form. Please try again or contact ${supportEmail} directly.`)
     } finally {

@@ -52,7 +52,7 @@ button,input,select,textarea{font:inherit}
 .bid-card li>span{color:var(--green);font-weight:800}
 .bid-card li>svg{color:var(--green);margin-top:1px}
 .hero-stats{grid-column:1/-1;display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:30px}
-.hero-stats>div{display:grid;align-content:start;gap:2px}
+.hero-stats>div{display:grid;align-content:start;justify-items:center;gap:2px;text-align:center}
 .hero-stats strong{color:var(--amber);font-size:21px;line-height:1.2;letter-spacing:-.035em}
 .hero-stats span{color:#d1dce0;font-size:8px}
 .hero-scroll{display:none}
