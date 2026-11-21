@@ -6,5 +6,5 @@ const reasons = [
 ]
 
 export default function WhySection() {
-  return <section className="why-section section-pad" id="why"><div className="section-heading"><div><span className="eyebrow">WHY TENDERPILOT</span><h2>Fast, private and personal</h2></div></div><div className="reasons-grid">{reasons.map((item, index) => <article className="reason-card" key={item.title}><span>0{index + 1}</span><h3>{item.title}</h3><p>{item.text}</p></article>)}</div></section>
+  return <section className="why-section section-pad" id="why"><div className="section-heading"><div><span className="eyebrow">WHY MYTENDERTEAM</span><h2>Fast, private and personal</h2></div></div><div className="reasons-grid">{reasons.map((item, index) => <article className="reason-card" key={item.title}><span>0{index + 1}</span><h3>{item.title}</h3><p>{item.text}</p></article>)}</div></section>
 }

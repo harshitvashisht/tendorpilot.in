@@ -14,6 +14,6 @@ export const services: Service[] = [
 export const faqs = [
   { q: 'Is GeM registration free? Why pay you?', a: 'Yes, GeM does not charge a registration fee. You pay us for getting it right and for what comes after: catalogues that get approved, bids that comply, and orders delivered and paid.' },
   { q: 'Can you guarantee that I will win orders?', a: 'No, and nobody honest can. We improve your eligibility, bid quality and pricing. Awards are decided by buyers under GeM rules.' },
-  { q: 'Are you affiliated with GeM or the government?', a: 'No. Tenderpilot is an independent consultancy that helps sellers use the GeM portal.' },
+  { q: 'Are you affiliated with GeM or the government?', a: 'No. MyTenderTeam is an independent consultancy that helps sellers use the GeM portal.' },
   { q: 'Which categories do you cover?', a: 'We support sellers of goods and services across major GeM categories. Not sure whether yours is covered? Ask for a free eligibility check.' },
 ]

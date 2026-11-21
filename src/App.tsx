@@ -29,18 +29,18 @@ const routeSections: Record<string, string> = {
 }
 
 const routeTitles: Record<string, string> = {
-  '/': 'TenderPilot – GeM Registration & Seller Support in India',
-  '/gem-guide': 'GeM Seller Registration Services in India | TenderPilot',
-  '/registration': 'GeM Seller Registration Services in India | TenderPilot',
-  '/who-we-help': 'GeM Services for MSMEs, OEMs & Traders | TenderPilot',
-  '/services': 'GeM Seller Support & Management Services | TenderPilot',
-  '/how': 'How GeM Registration Works | TenderPilot',
-  '/plans': 'GeM Registration Pricing & Plans | TenderPilot',
-  '/pricing': 'GeM Registration Pricing & Plans | TenderPilot',
-  '/faq': 'GeM Registration FAQs | TenderPilot',
-  '/contact': 'Contact TenderPilot | Free GeM Eligibility Check',
-  '/disclaimer': 'Disclaimer | TenderPilot',
-  '/privacy': 'Privacy | TenderPilot',
+  '/': 'MyTenderTeam – GeM Registration & Seller Support in India',
+  '/gem-guide': 'GeM Seller Registration Services in India | MyTenderTeam',
+  '/registration': 'GeM Seller Registration Services in India | MyTenderTeam',
+  '/who-we-help': 'GeM Services for MSMEs, OEMs & Traders | MyTenderTeam',
+  '/services': 'GeM Seller Support & Management Services | MyTenderTeam',
+  '/how': 'How GeM Registration Works | MyTenderTeam',
+  '/plans': 'GeM Registration Pricing & Plans | MyTenderTeam',
+  '/pricing': 'GeM Registration Pricing & Plans | MyTenderTeam',
+  '/faq': 'GeM Registration FAQs | MyTenderTeam',
+  '/contact': 'Contact MyTenderTeam | Free GeM Eligibility Check',
+  '/disclaimer': 'Disclaimer | MyTenderTeam',
+  '/privacy': 'Privacy | MyTenderTeam',
 }
 
 export default function App() {

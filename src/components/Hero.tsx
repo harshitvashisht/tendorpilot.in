@@ -15,7 +15,7 @@ export default function Hero() {
       </div>
       <aside className="bid-card hero-message-card">
         <div className="bid-card-heading"><span className="bid-card-icon"><FileCheck2 size={18} /></span><strong>Start selling on GeM</strong></div>
-        <p>Want to register your business on GeM but don't know where to start? TenderPilot helps you with documentation, registration and profile setup. Get a free eligibility check.</p>
+        <p>Want to register your business on GeM but don't know where to start? MyTenderTeam helps you with documentation, registration and profile setup. Get a free eligibility check.</p>
         <div className="hero-price"><strong>₹4,999</strong><span>GeM registration and setup</span><small>Professional assistance. One-time service fee, plus applicable taxes.</small></div>
         <a className="hero-card-link" href="/contact">Get your free GeM eligibility check <ArrowRight size={15} /></a>
       </aside>

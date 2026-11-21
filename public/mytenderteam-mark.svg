@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <rect width="64" height="64" rx="15" fill="#0B1F4D" />
-  <text x="5" y="47" fill="#F2F6FB" font-family="Montserrat,Arial,sans-serif" font-size="39" font-style="italic" font-weight="900">T</text>
-  <text x="26" y="47" fill="#0A6ED1" font-family="Montserrat,Arial,sans-serif" font-size="39" font-style="italic" font-weight="900">P</text>
+  <text x="1" y="45" fill="#F2F6FB" font-family="Montserrat,Arial,sans-serif" font-size="30" font-style="italic" font-weight="900">M</text>
+  <text x="28" y="45" fill="#0A6ED1" font-family="Montserrat,Arial,sans-serif" font-size="30" font-style="italic" font-weight="900">T</text>
   <path d="M35 13 58 3 51 20l-4-7-12 5Z" fill="#22A63A" />
   <path d="M6 53c13 6 30 4 45-5" fill="none" stroke="#22A63A" stroke-linecap="round" stroke-width="4" />
   <circle cx="49" cy="39" r="6" fill="#22A63A" />
