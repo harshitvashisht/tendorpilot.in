@@ -35,8 +35,8 @@ export default function ContactSection() {
       }
       setStatusType('success')
       setStatus(whatsappWindow
-        ? `Thanks — your enquiry was submitted to ${supportEmail}. WhatsApp has opened with your details; tap Send to message us.`
-        : `Thanks — your enquiry was submitted to ${supportEmail}. Allow pop-ups to open WhatsApp with your details, then tap Send.`)
+        ? 'Thanks — your enquiry was submitted. WhatsApp has opened with your details; tap Send to message us.'
+        : 'Thanks — your enquiry was submitted. Allow pop-ups to open WhatsApp with your details, then tap Send.')
       form.reset()
     } catch {
       whatsappWindow?.close()
